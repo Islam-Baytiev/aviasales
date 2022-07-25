@@ -1,0 +1,51 @@
+body {
+  background-color: #E5E5E5;
+}
+
+.container {
+  max-width: 960px;
+  height: auto;
+  margin: 0 auto;
+  background-color: #F3F7FA;
+  @media (max-width: 800px) {
+    padding: 0 10px;
+  }
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.imaged {
+  width: 60px;
+  height: 60px;
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.filterContainer {
+  margin-right: 20px;
+  @media (max-width: 800px) {
+    width: 100%;
+    margin: 0;
+  }
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  @media (max-width: 800px) {
+    width: 100%;
+    margin: 0;
+  }
+}

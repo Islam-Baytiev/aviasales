@@ -1,0 +1,26 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.blockOne {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  &__title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #A0B0B9;
+  }
+  &__text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #4A4A4A;
+  }
+}
