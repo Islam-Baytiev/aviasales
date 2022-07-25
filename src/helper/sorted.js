@@ -21,6 +21,11 @@ export const sortTickets = (tickets, filter) => {
 export const activeTickets = (active, tickets) => {
   if (!active.length) return [];
   if (active.length === 4) return [...tickets];
+  if (active.includes('Без пересадок')) {
+    return tickets.filter((el) => {
+      return el.segments[0].stops.length === 0 && el.segments[1].stops.length === 0;
+    });
+  }
   if (active.includes('1 пересадка')) {
     return tickets.filter((el) => {
       return el.segments[0].stops.length === 1 && el.segments[1].stops.length === 1;
@@ -34,11 +39,6 @@ export const activeTickets = (active, tickets) => {
   if (active.includes('3 пересадки')) {
     return tickets.filter((el) => {
       return el.segments[0].stops.length === 3 && el.segments[1].stops.length === 3;
-    });
-  }
-  if (active.includes('Без пересадок')) {
-    return tickets.filter((el) => {
-      return el.segments[0].stops.length === 0 && el.segments[1].stops.length === 0;
     });
   }
 };
